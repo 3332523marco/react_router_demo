@@ -42,8 +42,10 @@ class TabsControl extends React.Component{
         let _this=this;
         return(
             <div>
-                {/*动态生成Tab导航*/}
+                {/*动态生成Tab导航
+                 this.props 对象的属性与组件的属性一一对应，但是有一个例外，就是 this.props.children 属性。它表示组件的所有子节点*/}
                 <div className="Tab_tittle_wrap">
+
                     { React.Children.map( this.props.children , (element,index) => {
                         return(
                             /*箭头函数没有自己的this，这里的this继承自外围作用域，即组件本身*/
