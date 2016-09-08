@@ -39,11 +39,10 @@ class TabsControl extends React.Component{
     }
 
     render(){
-        let _this=this;
         return(
             <div>
                 {/*动态生成Tab导航
-                 this.props 对象的属性与组件的属性一一对应，但是有一个例外，就是 this.props.children 属性。它表示组件的所有子节点*/}
+                 1、this.props 对象的属性与组件的属性一一对应，但是有一个例外，就是 this.props.children 属性。它表示组件的所有子节点*/}
                 <div className="Tab_tittle_wrap">
 
                     { React.Children.map( this.props.children , (element,index) => {
@@ -88,8 +87,7 @@ class TabComponent extends React.Component{
     }
 }
 
-{/*
- ReactDOM.render(<TabComponent/>,document.getElementById("app"));*/}
+{/*ReactDOM.render(<TabComponent/>,document.getElementById("app"));*/}
 
 export default TabComponent;
 
